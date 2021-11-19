@@ -1,5 +1,6 @@
 .header-container {
 	text-align: center;
+    padding-top: 5px;
 	div {
 		height: 50px;
 		border-radius: 5px;
@@ -38,6 +39,7 @@
 }
 .most-searched-procedure-container {
 	margin-top: 20px;
+    padding-bottom: 30px;
 	mat-card {
 		border-radius: 20px;
 	}

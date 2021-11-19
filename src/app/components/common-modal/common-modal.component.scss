@@ -2,4 +2,8 @@ img {
 	display: block;
 	width: 700px;
 	height: auto;
+	&[src="assets/images/smart-health-checkup-result.jpeg"] {
+		width: 300px;
+		height: 360px;
+	}
 }
