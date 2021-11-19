@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="insurance-breakdown-container">
+		<div class="images-container">
+			<img [src]="'assets/images/hospitals/'+ hospital?.id + '.png'" width="115px" height="66px">
+			<div>
+				<img [src]="'assets/images/insurances/'+ hospital?.id + '.png'">
+				<span class="looklike-link" (click)="showInsurances()">more...</span>
+			</div>
+		</div>
+		<div class="table-container">
+			<table>
+				<tr>
+					<th style="text-align: start;">Break-up of hospital bill(an actual case)</th>
+					<th style="text-align: end;">Cost(INR)</th>
+				</tr>
+				<tr>
+					<td>Three Units of Platelets</td>
+					<td style="text-align: end;">{{hospital?.sampleCostBreakUp?.threePlateletUnits}}</td>
+				</tr>
+				<tr>
+					<td>Room rent</td>
+					<td style="text-align: end;">{{hospital?.sampleCostBreakUp?.rent}}</td>
+				</tr>
+				<tr>
+					<td>Doctor Visit</td>
+					<td style="text-align: end;">{{hospital?.sampleCostBreakUp?.consultationCharges}}</td>
+				</tr>
+				<tr>
+					<th style="text-align: start;">Total</th>
+					<th style="text-align: end;">{{hospital?.sampleCostBreakUp?.total}}</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="doctors-container">
+		<div class="doctor-container" *ngFor="let doctor of hospital?.doctors">
+			<app-doctor [doctor]="doctor"></app-doctor>
+		</div>
+		<span class="looklike-link">Click her for more...</span>
+		<h5>Mon - Fri (09:30 AM to 4:30 PM)</h5>
+	</div>
+	<div class="book-appointment-room-container">
+		<button mat-raised-button color="primary" (click)="showModal()">Book Appointment&nbsp;
+			<img src="assets/images/plus.jpeg" width="20px" height="16px">
+		</button>
+		<button mat-raised-button color="primary">Book your room&nbsp;
+			<img src="assets/images/clinic.jpeg" width="20px" height="16px"></button>
+	</div>
+</div>

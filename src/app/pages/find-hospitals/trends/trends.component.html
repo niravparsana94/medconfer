@@ -1,0 +1,92 @@
+<div class="header-container">
+	<div>Last 6 months Trend</div>
+</div>
+<div class="trend-container">
+	<div class="fixed-container">
+		<table>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">Avg Expenses(INR)</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">No of {{treatment?.treatementName}} cases</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">Success Rate (%)</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">Successful Claims</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">No. of Hospitalization days</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button color="primary">No of 5 * Ratings</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="scrollable-container">
+		<table *ngFor="let hospital of hospitals">
+			<tr>
+				<th>
+					<button mat-flat-button color="primary">{{getShortName(hospital?.name)}}</button>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.averageExpenses}}</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.noOfDengueCases}}</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.successRate}}</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.successfullClaims}}</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.noOfHospitalizations}}</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button mat-flat-button>{{hospital?.trend?.noOf5StartRatings}}</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="most-searched-procedure-container">
+	<mat-card>
+		<mat-card-subtitle>
+			<h4>Most Searched Procedure In India</h4>
+		</mat-card-subtitle>
+		<mat-card-content>
+			<p>Chemotherapy cost in India</p>
+			<p>Biopsy cost in India</p>
+			<p>Stomach Cancer cost in India</p>
+			<p>Liver Cancer Treatment cost in India</p>
+			<p>Breast Cancer Surgery cost in India</p>
+		</mat-card-content>
+	</mat-card>
+</div>

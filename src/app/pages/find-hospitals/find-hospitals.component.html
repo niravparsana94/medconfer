@@ -1,0 +1,78 @@
+<mat-toolbar>
+	<img src="assets/images/medconfer.png" width="140px" height="100px" class="logo">
+	<div class="location-component">
+		<button mat-icon-button color="primary" class="location-button" (click)="cityEditable=true;"
+			*ngIf="!cityEditable">
+			<mat-icon style="color:#e10000">place</mat-icon>{{city}}
+		</button>
+		<input class="location-input" [(ngModel)]="city" (blur)="cityEditable=!!!city" *ngIf="cityEditable">
+	</div>
+</mat-toolbar>
+<div class="filter-container">
+	<form class="treatment-form">
+		<mat-form-field appearance="fill">
+			<mat-label>Treatment For</mat-label>
+			<input type="text" matInput [formControl]="selectedTreatment" [matAutocomplete]="auto">
+			<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+				<mat-option *ngFor="let option of filteredTreatments | async" [value]="option">
+					{{option.treatementName}}
+				</mat-option>
+			</mat-autocomplete>
+		</mat-form-field>
+		<button mat-raised-button color="primary" (click)="getHospitals()">Search</button>
+		<div class="login-more-container">
+			<button mat-raised-button color="primary">Log In</button>
+			<mat-icon>more_vert</mat-icon>
+		</div>
+	</form>
+	<form class="sub-filters-form">
+		<mat-form-field appearance="fill">
+			<mat-label>Sort By</mat-label>
+			<mat-select [formControl]="sortBy">
+				<mat-option *ngFor="let sortBy of sortByOptions" [value]="sortBy">
+					{{sortBy}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<div class="slider-container">
+			<p class="price-per-day">Price / Day : <span style="font-style: italic;">{{priceRange.value |
+					currency:'INR':'symbol':'1.0'}}</span></p>
+			<mat-slider min="1000" max="100000" step="500" [formControl]="priceRange"></mat-slider>
+		</div>
+		<mat-form-field appearance="fill">
+			<mat-label>Treatment Date</mat-label>
+			<input matInput [matDatepicker]="picker">
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+	</form>
+</div>
+<div class="main-container">
+	<div class="hospital-record-container">
+		<h4>Hospitals in {{city}}</h4>
+		<h5>{{hospitals?.length}} records found</h5>
+	</div>
+	<div class="hospital-results-container">
+		<div class="hospitals-container">
+			<mat-card>
+				<mat-card-content>
+					<mat-tab-group animationDuration="0ms">
+						<mat-tab label="Hospitals">
+							<app-hospitals [hospitals]="hospitals"></app-hospitals>
+						</mat-tab>
+						<mat-tab label="Articles">
+							<app-articles></app-articles>
+						</mat-tab>
+					</mat-tab-group>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		<div class="trends-container">
+			<mat-card>
+				<mat-card-content>
+					<app-trends [hospitals]="hospitals" [treatment]="selectedTreatment.value"></app-trends>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="wrapper">
+	<div class="dialog">
+		<mat-toolbar color="primary" class="chatbot-header toolbar mat-elevation-z3">
+			<img src="assets/images/chatbot.jpg" width="25px">
+			<span style="margin-left: 10px;">MedConfer Chatbot</span>
+		</mat-toolbar>
+		<div class="messages">
+			<ng-container *ngFor="let message of messages">
+				<div class="message-row"
+					[ngClass]="{ 'from': message.author === 'bot', 'to':   message.author === 'user' }">
+					<div class="message">
+						<span [innerHtml]="message.content"></span>
+						<ng-container *ngIf="message.data">
+							<br>
+							<span class="looklike-link" (click)="dismiss(message.data)">Click here</span>
+						</ng-container>
+					</div>
+				</div>
+			</ng-container>
+		</div>
+		<div class="send-message" (click)="messageInput.click()">
+			<mat-form-field floatPlaceholder="never">
+				<input matInput #messageInput [(ngModel)]="value" (keyup.enter)="sendMessage()"
+					placeholder="Type your question here..." autofocus autocomplete="off">
+			</mat-form-field>
+		</div>
+	</div>
+</div>

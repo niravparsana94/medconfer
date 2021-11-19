@@ -1,0 +1,87 @@
+mat-toolbar {
+	display: flex;
+	position: sticky;
+	position: -webkit-sticky; /* For macOS/iOS Safari */
+	top: 0; /* Sets the sticky toolbar to be on top */
+	z-index: 1000;
+	justify-content: space-between;
+	align-items: flex-start;
+	.location-component {
+		position: absolute;
+		right: 60px;
+		width: 100px;
+		text-align: end;
+		.location-input {
+			width: 80px;
+		}
+	}
+}
+.filter-container {
+	.treatment-form {
+		width: 64%;
+		position: absolute;
+		top: 40px;
+		right: 162px;
+		z-index: 1000;
+		.login-more-container {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			mat-icon {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.sub-filters-form {
+		width: 36%;
+		margin-left: 30%;
+		.slider-container {
+			min-width: 200px;
+			.price-per-day {
+				margin-bottom: 0;
+				font-size: 15px;
+			}
+		}
+	}
+	form {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		mat-form-field {
+			width: 90%;
+			font-size: 12px;
+		}
+		button {
+			margin-bottom: 15px;
+		}
+	}
+}
+.main-container {
+	padding: 5px 10px;
+}
+.hospital-record-container {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	h4,
+	h5 {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+}
+.hospital-results-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	.hospitals-container {
+		width: 69%;
+	}
+	.trends-container {
+		width: 31%;
+	}
+	mat-card {
+		min-height: 60vh;
+	}
+}

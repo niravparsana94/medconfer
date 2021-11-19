@@ -1,0 +1,20 @@
+.doctor-container {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	.doctor-name {
+		margin: 0px;
+		font-size: 12px;
+	}
+	.doctor-success-rate {
+		width: 30px;
+		font-size: 10px;
+		text-align: center;
+		color: white;
+		border-radius: 15px;
+		background-color: green;
+		&.light-color {
+			background-color: rgb(0, 211, 0);
+		}
+	}
+}

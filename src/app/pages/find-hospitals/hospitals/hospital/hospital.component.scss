@@ -1,0 +1,54 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+.insurance-breakdown-container {
+	// width: 60%;
+	.images-container {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		div {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		.looklike-link {
+			font-size: 10px;
+		}
+	}
+	.table-container {
+		width: 100%;
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		table {
+			background-color: white;
+			border-collapse: collapse;
+			td,
+			th {
+				border: 1px solid blue;
+				padding: 8px;
+			}
+		}
+	}
+}
+.doctors-container {
+	// width: 40%;
+	.doctor-container {
+		margin: 15px 0;
+	}
+}
+.book-appointment-room-container {
+	width: 135px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+	button {
+		width: 170px;
+		transform: scale(0.75);
+	}
+}

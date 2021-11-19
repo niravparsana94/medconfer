@@ -1,0 +1,7 @@
+<div *ngIf="hospitals?.length > 0">
+	<mat-card *ngFor="let hospital of hospitals" style="margin: 10px 0;background-color: #ecf0fe;">
+		<mat-card-content>
+			<app-hospital [hospital]="hospital"></app-hospital>
+		</mat-card-content>
+	</mat-card>
+</div>

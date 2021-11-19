@@ -1,0 +1,31 @@
+<!-- <mat-card>
+	<mat-card-content>
+		<img src="assets/images/articles/first-artical.png">
+	</mat-card-content>
+</mat-card> -->
+<div class="article-container" *ngFor="let article of hospitalService.getArticles() | async">
+	<div class="image-container">
+		<img [src]="'assets/images/articles/'+article.name+'.png'" width="250px" height="175px">
+	</div>
+	<div class="article-content">
+		<h4 class="title">{{article.title}}</h4>
+		<div class="date-container">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
+				viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#555655"
+					d="M64.274,11.262c29.122,0.056,52.856,23.807,52.854,52.896 c0,29.087-23.749,52.843-52.864,52.888c-29.102,0.043-53.038-23.914-52.92-52.965C11.464,34.908,35.215,11.206,64.274,11.262z M64.33,19.607c-24.465-0.083-44.523,19.876-44.641,44.419c-0.117,24.496,19.964,44.649,44.52,44.681 c24.47,0.031,44.516-19.977,44.577-44.492C108.848,39.752,88.853,19.688,64.33,19.607z">
+				</path>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#555655"
+					d="M55.583,76.716c0.329-0.437,0.609-0.907,0.982-1.287 c10.745-10.965,21.506-21.915,32.246-32.886c1.508-1.542,3.195-2.32,5.339-1.626c3.106,1.004,4.281,4.764,2.312,7.37 c-0.27,0.357-0.591,0.676-0.907,0.997C83.7,61.369,71.846,73.453,59.986,85.533c-2.598,2.647-4.633,2.823-7.604,0.671 c-6.378-4.621-12.764-9.23-19.129-13.867c-2.675-1.948-2.981-5.303-0.735-7.457c1.746-1.673,4.217-1.764,6.409-0.185 c5.037,3.63,10.061,7.283,15.091,10.924C54.451,75.934,54.894,76.235,55.583,76.716z">
+				</path>
+			</svg>
+			<span>{{article.date}}</span>
+		</div>
+		<div class="content-container">
+			<p>{{article.content}}</p>
+			<div class="gradient"></div>
+		</div>
+		<div class="readmore looklike-link"><a (click)="showMore(article)">Read More</a></div>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+.header-container {
+	text-align: center;
+	div {
+		height: 30px;
+		border-radius: 5px;
+		background-color: #ecf0fe;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.trend-container {
+	display: flex;
+	.fixed-container {
+		table {
+			margin-top: 40px;
+			// width: 180px;
+		}
+		button {
+			width: 180px;
+		}
+	}
+	.scrollable-container {
+		overflow: auto;
+		display: flex;
+		td {
+			text-align: center;
+		}
+		td button {
+			width: 70px;
+			color: white;
+			background-color: #3371e1;
+			border-radius: 50px;
+			font-size: 13px;
+		}
+	}
+}
+.most-searched-procedure-container {
+	margin-top: 20px;
+	mat-card {
+		border-radius: 20px;
+	}
+}
+button {
+	transform: scale(0.75);
+	font-size: 13px;
+	padding: 0 5px;
+}

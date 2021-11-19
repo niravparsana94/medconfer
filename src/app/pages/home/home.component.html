@@ -1,0 +1,90 @@
+<mat-toolbar>
+	<div class="logo-location-container">
+		<img src="assets/images/medconfer.png" width="140px" height="100px" class="logo">
+		<div class="location-component">
+			<button mat-icon-button color="primary" class="location-button" (click)="cityEditable=true;"
+				*ngIf="!cityEditable">
+				<mat-icon style="color:#e10000">place</mat-icon>{{city}}
+			</button>
+			<input class="location-input" [(ngModel)]="city" (blur)="cityEditable=!!!city;setCity()"
+				*ngIf="cityEditable">
+		</div>
+	</div>
+	<div class="login-more-container">
+		<button mat-raised-button color="primary">Log In</button>
+		<mat-icon>more_vert</mat-icon>
+	</div>
+</mat-toolbar>
+<div class="header-container">
+	<div class="left-container">
+		<h1>Simplifying <span style="color:#1820DC">healthcare</span> for your family</h1>
+		<h3>Best treatment option from 2000+ doctors
+			of 150+ hospitals</h3>
+		<div class="buttons-container">
+			<button mat-raised-button color="primary">Know More</button>
+			<button mat-raised-button color="primary">Help</button>
+		</div>
+	</div>
+	<div class="right-container">
+		<img src="assets/images/doctor-patient.jpeg" height="250px">
+	</div>
+</div>
+<div class="treatment-container">
+	<form>
+		<mat-form-field appearance="fill">
+			<mat-label>Treatment For</mat-label>
+			<input type="text" matInput [formControl]="selectedTreatment" [matAutocomplete]="auto">
+			<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+				<mat-option *ngFor="let option of filteredTreatments | async" [value]="option">
+					{{option.treatementName}}
+				</mat-option>
+			</mat-autocomplete>
+		</mat-form-field>
+		<button mat-raised-button type="button" color="primary" (click)="gotoHospitals()">Search</button>
+	</form>
+</div>
+<div class="card-container">
+	<mat-card>
+		<img src="assets/images/medical-expert.jpeg" width="156px" height="130px">
+		<mat-card-content>
+			<h4>Talk to Medical Expert</h4>
+		</mat-card-content>
+	</mat-card>
+	<mat-card>
+		<img src="assets/images/compare-treatment-cost.jpeg" width="156px" height="130px">
+		<mat-card-content>
+			<h4>Compare Treatment Cost</h4>
+		</mat-card-content>
+	</mat-card>
+	<mat-card>
+		<img src="assets/images/smart-health-checkup.jpeg" width="156px" height="130px">
+		<mat-card-content>
+			<h4>Smart Health Check-up</h4>
+		</mat-card-content>
+	</mat-card>
+</div>
+<div class="top-10-hospitals-container">
+	<mat-card>
+		<mat-card-header>
+			<h5>TOP 10 Hospitals in {{city}}</h5>
+		</mat-card-header>
+		<mat-card-content>
+			<div>
+				<ul>
+					<li>1. <a>Fortis Hospital, Banergatta Road</a></li>
+					<li>2. <a>Manipal Hospital, HAL Airport Road</a></li>
+					<li>3. <a>Columbia Asia Referral Hospital, Yeshwanthpur</a></li>
+					<li>4. <a>Aster CMI, Hebbal</a></li>
+					<li>5. <a>Apollo Hospital, Jayanagar</a></li>
+				</ul>
+				<ul>
+					<li>6. <a>Fortis Hospital, Cunningham Road</a></li>
+					<li>7. <a>Columbia Asia, Whitefield</a></li>
+					<li>8. <a>Manipal Hospital, Whitefield</a></li>
+					<li>9. <a>Hosmat Hospital, Magrath Road</a></li>
+					<li>10. <a>Columbia Asia, Hebbal</a></li>
+				</ul>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>
