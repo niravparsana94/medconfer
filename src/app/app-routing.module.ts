@@ -6,7 +6,7 @@ import { FindHospitalsComponent } from './pages/find-hospitals/find-hospitals.co
 const routes: Routes = [
 	{ path: '', pathMatch: 'full', redirectTo: '/home' },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'find-hospitals', component: FindHospitalsComponent },
+	{ path: 'find-hospitals', component: FindHospitalsComponent }
 ];
 
 @NgModule({

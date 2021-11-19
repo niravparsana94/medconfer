@@ -24,6 +24,20 @@ export class HospitalService {
 					if (a.name > b.name) { return 1; }
 					return 0;
 				});
+			else if (sortBy == 'Our recommendations') {
+				return hospitals.sort(function (a, b) {
+					if (+a.recommendation < +b.recommendation) { return -1; }
+					if (+a.recommendation > +b.recommendation) { return 1; }
+					return 0;
+				}).reverse();
+			}
+			else if (sortBy == 'No. of cases handled') {
+				return hospitals.sort(function (a, b) {
+					if (a.trend.noOfCasesHandled < b.trend.noOfCasesHandled) { return -1; }
+					if (a.trend.noOfCasesHandled > b.trend.noOfCasesHandled) { return 1; }
+					return 0;
+				}).reverse();
+			}
 			else
 				return hospitals;
 		}));

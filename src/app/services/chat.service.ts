@@ -18,11 +18,6 @@ export class ChatService {
 
 	conversation = new Subject<Message[]>();
 
-	messageMap = {
-		"Hi": "Hello,<br/>What treatment you are searching for?",
-		"default": "I can't understand. Can you please repeat"
-	}
-
 	getBotAnswer(msg: string) {
 		const userMessage = new Message('user', msg);
 		this.conversation.next([userMessage]);
@@ -35,11 +30,41 @@ export class ChatService {
 	}
 
 	getBotMessage(question: string) {
+		question = question.toLowerCase();
+		let answer;
 		let data;
-		let answer = this.messageMap[question];
-		if (!answer && question.toLowerCase().startsWith('treatment ')) {
-			const userTreatment = question.replace('Treatment for ', '');
-			const treatment = this.treatments.find(t => { return t.treatementName.toLowerCase().includes(userTreatment.toLowerCase()) })
+
+		const greetings = ['hi', 'hello', 'whatsup', 'good evening', 'good morning', 'good afternoon'];
+		const salutations = ['bye', 'good bye'];
+		const words = ['human', 'agent', 'consultant'];
+
+		const greeting = greetings.find(g => g.toLowerCase().includes(question));
+		const salutation = salutations.find(s => s.toLowerCase().includes(question));
+		const word = words.find(w => w.toLowerCase().includes(question));
+		let treatment = this.treatments.find(t => { return t.treatementName.toLowerCase().includes(question) });
+
+		if (greeting) {
+			if (question.includes('good') && question.includes(greeting))
+				answer = `Hello, ${greeting}.<br>I am Medulla. How can I help you?`;
+			else
+				answer = `Hello, I am Medulla.<br>How can I help you?`;
+		}
+		else if (salutation)
+			answer = 'Good Bye';
+		else if (word)
+			answer = 'Our agents are currently not available.<br>Please call us or send us an email.';
+		else if (question.includes('how are'))
+			answer = 'I am good, Thank you.';
+		else if (question.includes('help'))
+			answer = 'How can I help you?';
+		else if (question == 'ok')
+			answer = 'Is there anything I can help you with?';
+		else if (question.includes('awesome'))
+			answer = 'Thank you!';
+		else if (treatment || question.startsWith('treatment ')) {
+			const userTreatment = question.replace('treatment for ', '');
+			if (!treatment)
+				treatment = this.treatments.find(t => { return t.treatementName.toLowerCase().includes(userTreatment) })
 			if (treatment) {
 				data = treatment;
 				answer = `We found ${treatment.treatementName}.<br>Click below to find hospitals`;
@@ -48,7 +73,7 @@ export class ChatService {
 				answer = `Sorry, could'nt find treatment.`;
 		}
 		return {
-			msg: answer || this.messageMap['default'],
+			msg: answer || "I can't understand. Can you please repeat",
 			data
 		};
 	}

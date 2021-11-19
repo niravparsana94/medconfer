@@ -2,7 +2,7 @@
 	<div class="dialog">
 		<mat-toolbar color="primary" class="chatbot-header toolbar mat-elevation-z3">
 			<img src="assets/images/chatbot.jpg" width="25px">
-			<span style="margin-left: 10px;">MedConfer Chatbot</span>
+			<span style="margin-left: 10px;">Ask Medulla</span>
 		</mat-toolbar>
 		<div class="messages">
 			<ng-container *ngFor="let message of messages">
@@ -12,7 +12,7 @@
 						<span [innerHtml]="message.content"></span>
 						<ng-container *ngIf="message.data">
 							<br>
-							<span class="looklike-link" (click)="dismiss(message.data)">Click here</span>
+							<span class="looklike-link cursor-pointer" (click)="dismiss(message.data)">Click here</span>
 						</ng-container>
 					</div>
 				</div>

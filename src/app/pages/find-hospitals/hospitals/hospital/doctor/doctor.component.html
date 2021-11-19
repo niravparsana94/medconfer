@@ -1,6 +1,6 @@
 <div class="doctor-container">
-	<img src="assets/images/doctor.jpeg">
-	<div class="doctor-info-container" [matTooltip]="doctor?.remarks" [matTooltipPosition]="'after'">
+	<img [src]="'assets/images/doctors/'+ (index+1) +'.jpeg'" class="doctor-image">
+	<div class="doctor-info-container" [matTooltip]="treatment+' : '+ doctor?.remarks" [matTooltipPosition]="'after'">
 		<h4 class="doctor-name">{{doctor?.doctorName}}</h4>
 		<div class="doctor-success-rate" [ngClass]="{'light-color': +doctor?.successRate < 8}">{{+doctor?.successRate |
 			number : '1.1-1'}}</div>

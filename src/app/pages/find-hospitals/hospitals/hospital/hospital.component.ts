@@ -11,14 +11,19 @@ import { InsurancesComponent } from './insurances/insurances.component';
 })
 export class HospitalComponent implements OnInit {
 	@Input() hospital: any;
+	@Input() treatment: any;
 
 	constructor(public dialog: MatDialog, private hospitalService: HospitalService) { }
 
 	ngOnInit() {
 	}
 
-	showModal() {
-		this.dialog.open(CommonModalComponent);
+	showModal(imageSrc) {
+		this.dialog.open(CommonModalComponent, {
+			data: {
+				imageSrc
+			}
+		});
 	}
 
 	showInsurances() {

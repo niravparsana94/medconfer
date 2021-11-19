@@ -16,9 +16,10 @@ export class FindHospitalsComponent implements OnInit {
 	city: any;
 	subscription: Subscription;
 	selectedTreatment = new FormControl();
+	currentTreatmentName: any;
 	sortBy = new FormControl();
 	priceRange = new FormControl();
-	sortByOptions = ['Our recommendations', 'A-Z']
+	sortByOptions = ['Our recommendations', 'No. of cases handled', 'Beds available', 'No. of cases handled', 'Rating of hospital', 'A-Z']
 	treatments: any[];
 	filteredTreatments: Observable<any[]>;
 	filteredSubTreatments: Observable<any[]>;
@@ -53,6 +54,7 @@ export class FindHospitalsComponent implements OnInit {
 	}
 
 	getHospitals() {
+		this.currentTreatmentName = this.selectedTreatment.value.treatementName;
 		if (!this.city || this.city.trim() == '')
 			this.commonService.showToast('Please enter city');
 		else if (!this.selectedTreatment.value)

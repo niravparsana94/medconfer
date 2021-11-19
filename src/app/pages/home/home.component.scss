@@ -6,16 +6,12 @@ mat-toolbar {
 	z-index: 1000;
 	justify-content: space-between;
 	align-items: flex-start;
-	.logo-location-container {
-		width: 40%;
-		display: flex;
-		.location-component {
-			margin-top: 10px;
-			margin-left: 30px;
-			width: 100px;
-			.location-input {
-				width: 80px;
-			}
+	.location-component {
+		margin-top: 10px;
+		margin-left: 30px;
+		width: 100px;
+		.location-input {
+			width: 80px;
 		}
 	}
 	.login-more-container {
@@ -33,15 +29,18 @@ mat-toolbar {
 	.left-container {
 		.buttons-container {
 			margin-top: 100px;
-			text-align: end;
 			button {
-				margin: 0 5px;
+				margin: 0 10px;
+				font-size: 25px;
+				height: 60px;
+				margin-bottom: 15px;
 			}
 		}
 	}
 }
 .treatment-container {
-	margin-top: 20px;
+	width: 50%;
+	margin: 50px auto;
 	form {
 		text-align: center;
 		display: flex;
@@ -68,6 +67,13 @@ mat-toolbar {
 		height: 150px;
 	}
 }
+.bottom-image-container {
+	display: flex;
+	justify-content: space-around;
+	img {
+		width: 480px;
+	}
+}
 .top-10-hospitals-container {
 	margin-top: 20px;
 	margin: 20px 30px 0;
@@ -89,5 +95,12 @@ mat-toolbar {
 				text-decoration: underline;
 			}
 		}
+	}
+}
+::ng-deep app-home .mat-form-field-outline {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	.mat-form-field-outline-start,
+	.mat-form-field-outline-end {
+		border-radius: 0 !important;
 	}
 }

@@ -1,0 +1,19 @@
+.main-container {
+	padding: 15px;
+}
+table {
+	background-color: white;
+	border-collapse: collapse;
+	td,
+	th {
+		border: 1px solid #ff2d0057;
+		padding: 8px;
+	}
+}
+.blood-group-container {
+	display: flex;
+	justify-content: space-between;
+	a {
+		font-size: 13px;
+	}
+}

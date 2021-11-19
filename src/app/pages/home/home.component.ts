@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { CommonModalComponent } from 'src/app/components/common-modal/common-modal.component';
+import { SmartHealthCheckupComponent } from 'src/app/components/smart-health-checkup/smart-health-checkup.component';
+import { SmartInsurancePolicyComponent } from 'src/app/components/smart-insurance-policy/smart-insurance-policy.component';
 import { CommonService } from 'src/app/services/common.service';
 import { HospitalService } from 'src/app/services/hospital.service';
 
@@ -18,7 +22,7 @@ export class HomeComponent implements OnInit {
 	treatments: any[];
 	filteredTreatments: Observable<any[]>;
 
-	constructor(private router: Router, private commonService: CommonService, private hospitalService: HospitalService) { }
+	constructor(private router: Router, private commonService: CommonService, private hospitalService: HospitalService, public dialog: MatDialog) { }
 
 	ngOnInit() {
 		this.getCurrentCity();
@@ -67,5 +71,21 @@ export class HomeComponent implements OnInit {
 			this.commonService.showToast('Please select treatment');
 		else
 			this.router.navigate(['/find-hospitals'], { queryParams: { city: this.city.trim(), treatment: this.selectedTreatment.value.treatementId } });
+	}
+
+	showImage(imageSrc) {
+		this.dialog.open(CommonModalComponent, {
+			data: {
+				imageSrc
+			}
+		});
+	}
+
+	showSmartInsurancePopup() {
+		this.dialog.open(SmartInsurancePolicyComponent)
+	}
+
+	showSmartHealthPopup() {
+		this.dialog.open(SmartHealthCheckupComponent)
 	}
 }

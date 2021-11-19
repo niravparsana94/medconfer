@@ -1,7 +1,7 @@
 .header-container {
 	text-align: center;
 	div {
-		height: 30px;
+		height: 50px;
 		border-radius: 5px;
 		background-color: #ecf0fe;
 		display: flex;
@@ -12,6 +12,7 @@
 .trend-container {
 	display: flex;
 	.fixed-container {
+		background-color: #ecf0fe;
 		table {
 			margin-top: 40px;
 			// width: 180px;

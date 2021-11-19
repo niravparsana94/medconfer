@@ -7,9 +7,14 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 	styleUrls: ['./common-modal.component.scss']
 })
 export class CommonModalComponent implements OnInit {
+	imageSrc: any;
 	fromArticles = false;
 
-	constructor(@Inject(MAT_DIALOG_DATA) public data: any) { this.fromArticles = data && data.fromArticles ? true : false }
+	constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+		this.fromArticles = data && data.fromArticles ? true : false;
+		if (!this.fromArticles)
+			this.imageSrc = data.imageSrc;
+	}
 
 	ngOnInit() {
 	}

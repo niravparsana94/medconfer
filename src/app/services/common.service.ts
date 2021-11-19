@@ -52,7 +52,7 @@ const MOCKDATA = {
 			"id": 1001,
 			"name": "Apollo Hospitals",
 			"locationCode": "BENGALURU",
-			"pricePerDay": 85000,
+			"pricePerDay": 45000,
 			"recommendation": "5",
 			"treatements": [
 				{
@@ -66,14 +66,6 @@ const MOCKDATA = {
 				{
 					"treatementId": 2003,
 					"treatementName": "Diabetes"
-				},
-				{
-					"treatementId": 2004,
-					"treatementName": "Pneumonia"
-				},
-				{
-					"treatementId": 2005,
-					"treatementName": "Asthma"
 				},
 				{
 					"treatementId": 2007,
@@ -94,7 +86,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 5400,
-				"noOfDengueCases": 232,
+				"noOfCasesHandled": 232,
 				"successRate": 96,
 				"successfullClaims": 96,
 				"noOfHospitalizations": 3,
@@ -104,33 +96,33 @@ const MOCKDATA = {
 				{
 					"doctorId": 3001,
 					"doctorName": "Dr Ganesh",
-					"successRate": "8.9",
-					"remarks": "155 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "155 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3002,
-					"doctorName": "Dr Mahesh",
-					"successRate": "9",
-					"remarks": "120 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Priyanka",
+					"successRate": "9.5",
+					"remarks": "120 cases handled in last 6 months with 95% success rate"
 				},
 				{
 					"doctorId": 3003,
 					"doctorName": "Dr Ravi",
-					"successRate": "8.0",
-					"remarks": "90 cases handled in last 6 months with 80% success rate"
+					"successRate": "8.5",
+					"remarks": "90 cases handled in last 6 months with 85% success rate"
 				},
 				{
 					"doctorId": 3004,
 					"doctorName": "Dr Indira",
-					"successRate": "9.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"successRate": "8.0",
+					"remarks": "200 cases handled in last 6 months with 80% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
-				"threePlateletUnits": 52950,
-				"rent": 67200,
+				"threePlateletUnits": 52000,
+				"rent": 45000,
 				"consultationCharges": 2070,
-				"total": 100420
+				"total": 99070
 			}
 		},
 		{
@@ -179,7 +171,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 44000,
-				"noOfDengueCases": 202,
+				"noOfCasesHandled": 202,
 				"successRate": 94,
 				"successfullClaims": 95,
 				"noOfHospitalizations": 4,
@@ -189,26 +181,26 @@ const MOCKDATA = {
 				{
 					"doctorId": 3005,
 					"doctorName": "Dr Aftab",
-					"successRate": "8.9",
-					"remarks": "130 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "130 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3006,
-					"doctorName": "Dr Akhil",
+					"doctorName": "Dr Vijaya",
 					"successRate": "9.8",
 					"remarks": "38 cases handled in last 6 months with 98% success rate"
 				},
 				{
 					"doctorId": 3007,
-					"doctorName": "Dr ANil",
-					"successRate": "7.0",
-					"remarks": "200 cases handled in last 6 months with 70% success rate"
+					"doctorName": "Dr Anil",
+					"successRate": "8.0",
+					"remarks": "200 cases handled in last 6 months with 80% success rate"
 				},
 				{
 					"doctorId": 3008,
-					"doctorName": "Dr Vikram",
-					"successRate": "9.0",
-					"remarks": "70 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Sindhu",
+					"successRate": "7.0",
+					"remarks": "70 cases handled in last 6 months with 70% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -264,7 +256,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 50000,
-				"noOfDengueCases": 102,
+				"noOfCasesHandled": 102,
 				"successRate": 90,
 				"successfullClaims": 80,
 				"noOfHospitalizations": 5,
@@ -278,22 +270,22 @@ const MOCKDATA = {
 					"remarks": "120 cases handled in last 6 months with 89% success rate"
 				},
 				{
-					"doctorId": 3010,
-					"doctorName": "Dr Nandha",
-					"successRate": "7.8",
-					"remarks": "230 cases handled in last 6 months with 78% success rate"
-				},
-				{
 					"doctorId": 3011,
-					"doctorName": "Dr Sunil",
+					"doctorName": "Dr Smitha",
 					"successRate": "8.9",
 					"remarks": "80 cases handled in last 6 months with 89% success rate"
 				},
 				{
+					"doctorId": 3010,
+					"doctorName": "Dr Nandha",
+					"successRate": "8.0",
+					"remarks": "230 cases handled in last 6 months with 80% success rate"
+				},
+				{
 					"doctorId": 3012,
-					"doctorName": "Dr Vikram",
-					"successRate": "9.5",
-					"remarks": "33 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Vidya",
+					"successRate": "7.8",
+					"remarks": "33 cases handled in last 6 months with 78% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -333,7 +325,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 6400,
-				"noOfDengueCases": 100,
+				"noOfCasesHandled": 100,
 				"successRate": 80,
 				"successfullClaims": 80,
 				"noOfHospitalizations": 5,
@@ -343,14 +335,14 @@ const MOCKDATA = {
 				{
 					"doctorId": 3013,
 					"doctorName": "Dr Girish",
-					"successRate": "8.9",
-					"remarks": "155 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.8",
+					"remarks": "155 cases handled in last 6 months with 98% success rate"
 				},
 				{
 					"doctorId": 3014,
-					"doctorName": "Dr Vijay",
-					"successRate": "9.0",
-					"remarks": "300 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Monal",
+					"successRate": "9.5",
+					"remarks": "300 cases handled in last 6 months with 95% success rate"
 				},
 				{
 					"doctorId": 3015,
@@ -360,7 +352,7 @@ const MOCKDATA = {
 				},
 				{
 					"doctorId": 3016,
-					"doctorName": "Dr Indira",
+					"doctorName": "Dr Anitha",
 					"successRate": "8.8",
 					"remarks": "100 cases handled in last 6 months with 88% success rate"
 				}
@@ -404,17 +396,13 @@ const MOCKDATA = {
 					"treatementName": "Hepatitis"
 				},
 				{
-					"treatementId": 2009,
-					"treatementName": "Arthritis"
-				},
-				{
 					"treatementId": 2010,
 					"treatementName": "Anemia"
 				}
 			],
 			"trend": {
 				"averageExpenses": 3500,
-				"noOfDengueCases": 100,
+				"noOfCasesHandled": 100,
 				"successRate": 96,
 				"successfullClaims": 90,
 				"noOfHospitalizations": 13,
@@ -424,26 +412,26 @@ const MOCKDATA = {
 				{
 					"doctorId": 3017,
 					"doctorName": "Dr Vasu",
-					"successRate": "8.9",
-					"remarks": "155 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "155 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3018,
-					"doctorName": "Dr Vignesh",
-					"successRate": "9",
-					"remarks": "120 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Kavitha",
+					"successRate": "9.5",
+					"remarks": "120 cases handled in last 6 months with 95% success rate"
 				},
 				{
 					"doctorId": 3019,
-					"doctorName": "Dr Chandra",
-					"successRate": "8.0",
-					"remarks": "90 cases handled in last 6 months with 80% success rate"
+					"doctorName": "Dr Chandru",
+					"successRate": "9.0",
+					"remarks": "90 cases handled in last 6 months with 90% success rate"
 				},
 				{
 					"doctorId": 3020,
-					"doctorName": "Dr Indira",
-					"successRate": "9.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Sunitha",
+					"successRate": "8.5",
+					"remarks": "200 cases handled in last 6 months with 85% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -487,15 +475,11 @@ const MOCKDATA = {
 				{
 					"treatementId": 2008,
 					"treatementName": "Hepatitis"
-				},
-				{
-					"treatementId": 2009,
-					"treatementName": "Arthritis"
 				}
 			],
 			"trend": {
 				"averageExpenses": 5000,
-				"noOfDengueCases": 200,
+				"noOfCasesHandled": 200,
 				"successRate": 96,
 				"successfullClaims": 80,
 				"noOfHospitalizations": 8,
@@ -505,26 +489,26 @@ const MOCKDATA = {
 				{
 					"doctorId": 3021,
 					"doctorName": "Dr Paresh",
-					"successRate": "8.9",
-					"remarks": "155 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "155 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3022,
-					"doctorName": "Dr Vignesh",
-					"successRate": "9",
+					"doctorName": "Dr Vidya",
+					"successRate": "9.0",
 					"remarks": "120 cases handled in last 6 months with 90% success rate"
 				},
 				{
 					"doctorId": 3023,
 					"doctorName": "Dr Naresh",
-					"successRate": "8.0",
-					"remarks": "90 cases handled in last 6 months with 80% success rate"
+					"successRate": "8.8",
+					"remarks": "90 cases handled in last 6 months with 88% success rate"
 				},
 				{
 					"doctorId": 3024,
-					"doctorName": "Dr Kumar",
-					"successRate": "9.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Lalitha",
+					"successRate": "8.5",
+					"remarks": "200 cases handled in last 6 months with 85% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -570,17 +554,13 @@ const MOCKDATA = {
 					"treatementName": "Hepatitis"
 				},
 				{
-					"treatementId": 2009,
-					"treatementName": "Arthritis"
-				},
-				{
 					"treatementId": 2010,
 					"treatementName": "Anemia"
 				}
 			],
 			"trend": {
 				"averageExpenses": 15000,
-				"noOfDengueCases": 220,
+				"noOfCasesHandled": 220,
 				"successRate": 90,
 				"successfullClaims": 99,
 				"noOfHospitalizations": 18,
@@ -590,26 +570,26 @@ const MOCKDATA = {
 				{
 					"doctorId": 3025,
 					"doctorName": "Dr Joe",
-					"successRate": "8.9",
-					"remarks": "185 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.5",
+					"remarks": "185 cases handled in last 6 months with 95% success rate"
 				},
 				{
 					"doctorId": 3026,
-					"doctorName": "Dr Biden",
-					"successRate": "9",
-					"remarks": "400 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Rani",
+					"successRate": "9.3",
+					"remarks": "400 cases handled in last 6 months with 93% success rate"
 				},
 				{
 					"doctorId": 3027,
 					"doctorName": "Dr Harold",
-					"successRate": "8.0",
-					"remarks": "90 cases handled in last 6 months with 80% success rate"
+					"successRate": "8.8",
+					"remarks": "90 cases handled in last 6 months with 88% success rate"
 				},
 				{
 					"doctorId": 3028,
-					"doctorName": "Dr Kumar",
-					"successRate": "9.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Aishwarya",
+					"successRate": "8.5",
+					"remarks": "200 cases handled in last 6 months with 85% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -635,14 +615,6 @@ const MOCKDATA = {
 					"treatementName": "Malaria"
 				},
 				{
-					"treatementId": 2003,
-					"treatementName": "Diabetes"
-				},
-				{
-					"treatementId": 2004,
-					"treatementName": "Pneumonia"
-				},
-				{
 					"treatementId": 2005,
 					"treatementName": "Asthma"
 				},
@@ -655,17 +627,13 @@ const MOCKDATA = {
 					"treatementName": "Hepatitis"
 				},
 				{
-					"treatementId": 2009,
-					"treatementName": "Arthritis"
-				},
-				{
 					"treatementId": 2010,
 					"treatementName": "Anemia"
 				}
 			],
 			"trend": {
 				"averageExpenses": 48000,
-				"noOfDengueCases": 320,
+				"noOfCasesHandled": 320,
 				"successRate": 99,
 				"successfullClaims": 140,
 				"noOfHospitalizations": 50,
@@ -674,27 +642,27 @@ const MOCKDATA = {
 			"doctors": [
 				{
 					"doctorId": 3029,
-					"doctorName": "Dr Aishwarya",
+					"doctorName": "Dr Karan",
 					"successRate": "9.9",
-					"remarks": "185 cases handled in last 6 months with 89% success rate"
+					"remarks": "185 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3030,
 					"doctorName": "Dr Anitha",
-					"successRate": "9",
+					"successRate": "9.0",
 					"remarks": "400 cases handled in last 6 months with 90% success rate"
 				},
 				{
 					"doctorId": 3031,
-					"doctorName": "Dr Kamal",
+					"doctorName": "Dr Roshan",
 					"successRate": "6.0",
-					"remarks": "90 cases handled in last 6 months with 80% success rate"
+					"remarks": "90 cases handled in last 6 months with 60% success rate"
 				},
 				{
 					"doctorId": 3032,
-					"doctorName": "Dr Hari",
-					"successRate": "9.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Kumari",
+					"successRate": "5.5",
+					"remarks": "200 cases handled in last 6 months with 55% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -740,17 +708,13 @@ const MOCKDATA = {
 					"treatementName": "Hepatitis"
 				},
 				{
-					"treatementId": 2009,
-					"treatementName": "Arthritis"
-				},
-				{
 					"treatementId": 2010,
 					"treatementName": "Anemia"
 				}
 			],
 			"trend": {
 				"averageExpenses": 60000,
-				"noOfDengueCases": 130,
+				"noOfCasesHandled": 130,
 				"successRate": 100,
 				"successfullClaims": 50,
 				"noOfHospitalizations": 10,
@@ -759,27 +723,27 @@ const MOCKDATA = {
 			"doctors": [
 				{
 					"doctorId": 3033,
-					"doctorName": "Dr Sunitha",
-					"successRate": "6.9",
+					"doctorName": "Dr Kumar",
+					"successRate": "8.9",
 					"remarks": "185 cases handled in last 6 months with 89% success rate"
 				},
 				{
 					"doctorId": 3034,
-					"doctorName": "Dr Kumar",
-					"successRate": "8",
-					"remarks": "300 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Sunitha",
+					"successRate": "8.2",
+					"remarks": "300 cases handled in last 6 months with 82% success rate"
 				},
 				{
 					"doctorId": 3035,
 					"doctorName": "Dr Mahesh",
-					"successRate": "6.0",
+					"successRate": "8.0",
 					"remarks": "910 cases handled in last 6 months with 80% success rate"
 				},
 				{
 					"doctorId": 3036,
-					"doctorName": "Dr Suresh",
-					"successRate": "8.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Tanvi",
+					"successRate": "7.5",
+					"remarks": "200 cases handled in last 6 months with 75% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -819,7 +783,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 20000,
-				"noOfDengueCases": 150,
+				"noOfCasesHandled": 150,
 				"successRate": 99,
 				"successfullClaims": 80,
 				"noOfHospitalizations": 30,
@@ -829,26 +793,26 @@ const MOCKDATA = {
 				{
 					"doctorId": 3037,
 					"doctorName": "Dr Vijay",
-					"successRate": "6.9",
-					"remarks": "185 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "185 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3038,
-					"doctorName": "Dr Akhil",
-					"successRate": "8.8",
-					"remarks": "300 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Divya",
+					"successRate": "9.7",
+					"remarks": "300 cases handled in last 6 months with 97% success rate"
 				},
 				{
 					"doctorId": 3039,
 					"doctorName": "Dr Mahesh",
-					"successRate": "7.0",
+					"successRate": "8.0",
 					"remarks": "910 cases handled in last 6 months with 80% success rate"
 				},
 				{
 					"doctorId": 3040,
-					"doctorName": "Dr Kamar",
-					"successRate": "8.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Hema",
+					"successRate": "7.0",
+					"remarks": "200 cases handled in last 6 months with 70% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -868,18 +832,6 @@ const MOCKDATA = {
 				{
 					"treatementId": 2001,
 					"treatementName": "Dengue Fever"
-				},
-				{
-					"treatementId": 2002,
-					"treatementName": "Malaria"
-				},
-				{
-					"treatementId": 2003,
-					"treatementName": "Diabetes"
-				},
-				{
-					"treatementId": 2004,
-					"treatementName": "Pneumonia"
 				},
 				{
 					"treatementId": 2005,
@@ -904,7 +856,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 50000,
-				"noOfDengueCases": 200,
+				"noOfCasesHandled": 200,
 				"successRate": 98,
 				"successfullClaims": 90,
 				"noOfHospitalizations": 140,
@@ -913,27 +865,27 @@ const MOCKDATA = {
 			"doctors": [
 				{
 					"doctorId": 3041,
-					"doctorName": "Dr Saroja",
-					"successRate": "7.9",
+					"doctorName": "Dr Shashidhar",
+					"successRate": "8.9",
 					"remarks": "200 cases handled in last 6 months with 89% success rate"
 				},
 				{
 					"doctorId": 3042,
-					"doctorName": "Dr Kaveri",
-					"successRate": "4.8",
-					"remarks": "150 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Saroja",
+					"successRate": "8.8",
+					"remarks": "150 cases handled in last 6 months with 88% success rate"
 				},
 				{
 					"doctorId": 3043,
-					"doctorName": "Dr Andrea",
-					"successRate": "9.0",
-					"remarks": "600 cases handled in last 6 months with 80% success rate"
+					"doctorName": "Dr Jacob",
+					"successRate": "7.0",
+					"remarks": "600 cases handled in last 6 months with 70% success rate"
 				},
 				{
 					"doctorId": 3044,
-					"doctorName": "Dr Jacob",
-					"successRate": "8.5",
-					"remarks": "200 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Andrea",
+					"successRate": "6.5",
+					"remarks": "200 cases handled in last 6 months with 65% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -973,7 +925,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 20000,
-				"noOfDengueCases": 100,
+				"noOfCasesHandled": 100,
 				"successRate": 98,
 				"successfullClaims": 50,
 				"noOfHospitalizations": 60,
@@ -983,14 +935,14 @@ const MOCKDATA = {
 				{
 					"doctorId": 3045,
 					"doctorName": "Dr Ganesh",
-					"successRate": "7.9",
-					"remarks": "100 cases handled in last 6 months with 89% success rate"
+					"successRate": "9.9",
+					"remarks": "100 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3046,
-					"doctorName": "Dr John",
-					"successRate": "4.8",
-					"remarks": "250 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Jaya",
+					"successRate": "8.8",
+					"remarks": "250 cases handled in last 6 months with 88% success rate"
 				},
 				{
 					"doctorId": 3047,
@@ -1000,9 +952,9 @@ const MOCKDATA = {
 				},
 				{
 					"doctorId": 3048,
-					"doctorName": "Dr Vasu",
-					"successRate": "6.5",
-					"remarks": "300 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Usha",
+					"successRate": "8.0",
+					"remarks": "300 cases handled in last 6 months with 80% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -1028,10 +980,6 @@ const MOCKDATA = {
 					"treatementName": "Pneumonia"
 				},
 				{
-					"treatementId": 2005,
-					"treatementName": "Asthma"
-				},
-				{
 					"treatementId": 2007,
 					"treatementName": "Tuberculosis"
 				},
@@ -1050,7 +998,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 70000,
-				"noOfDengueCases": 90,
+				"noOfCasesHandled": 90,
 				"successRate": 98,
 				"successfullClaims": 50,
 				"noOfHospitalizations": 30,
@@ -1061,25 +1009,25 @@ const MOCKDATA = {
 					"doctorId": 3049,
 					"doctorName": "Dr Philip",
 					"successRate": "7.9",
-					"remarks": "200 cases handled in last 6 months with 89% success rate"
+					"remarks": "200 cases handled in last 6 months with 79% success rate"
 				},
 				{
 					"doctorId": 3050,
-					"doctorName": "Dr Bill",
+					"doctorName": "Dr Sriya",
 					"successRate": "7.8",
-					"remarks": "180 cases handled in last 6 months with 90% success rate"
+					"remarks": "180 cases handled in last 6 months with 78% success rate"
 				},
 				{
 					"doctorId": 3051,
 					"doctorName": "Dr Kiran",
-					"successRate": "9.0",
-					"remarks": "300 cases handled in last 6 months with 80% success rate"
+					"successRate": "7.0",
+					"remarks": "300 cases handled in last 6 months with 70% success rate"
 				},
 				{
 					"doctorId": 3052,
-					"doctorName": "Dr Lokesh",
+					"doctorName": "Dr Jeevika",
 					"successRate": "6.5",
-					"remarks": "400 cases handled in last 6 months with 95% success rate"
+					"remarks": "400 cases handled in last 6 months with 65% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -1101,22 +1049,6 @@ const MOCKDATA = {
 					"treatementName": "Dengue Fever"
 				},
 				{
-					"treatementId": 2002,
-					"treatementName": "Malaria"
-				},
-				{
-					"treatementId": 2003,
-					"treatementName": "Diabetes"
-				},
-				{
-					"treatementId": 2004,
-					"treatementName": "Pneumonia"
-				},
-				{
-					"treatementId": 2005,
-					"treatementName": "Asthma"
-				},
-				{
 					"treatementId": 2007,
 					"treatementName": "Tuberculosis"
 				},
@@ -1135,7 +1067,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 60000,
-				"noOfDengueCases": 150,
+				"noOfCasesHandled": 150,
 				"successRate": 98,
 				"successfullClaims": 150,
 				"noOfHospitalizations": 130,
@@ -1146,25 +1078,25 @@ const MOCKDATA = {
 					"doctorId": 3049,
 					"doctorName": "Dr Kannan",
 					"successRate": "9.9",
-					"remarks": "900 cases handled in last 6 months with 89% success rate"
+					"remarks": "900 cases handled in last 6 months with 99% success rate"
 				},
 				{
 					"doctorId": 3050,
-					"doctorName": "Dr Arya",
-					"successRate": "7.8",
-					"remarks": "280 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Anitha",
+					"successRate": "9.8",
+					"remarks": "280 cases handled in last 6 months with 98% success rate"
 				},
 				{
 					"doctorId": 3051,
 					"doctorName": "Dr Salim",
-					"successRate": "7.0",
-					"remarks": "500 cases handled in last 6 months with 80% success rate"
+					"successRate": "8.2",
+					"remarks": "500 cases handled in last 6 months with 82% success rate"
 				},
 				{
 					"doctorId": 3052,
-					"doctorName": "Dr Vivek",
-					"successRate": "9.5",
-					"remarks": "400 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Sunitha",
+					"successRate": "8.0",
+					"remarks": "400 8ases handled in last 6 months with 80% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -1181,26 +1113,6 @@ const MOCKDATA = {
 			"pricePerDay": 30000,
 			"recommendation": "3",
 			"treatements": [
-				{
-					"treatementId": 2001,
-					"treatementName": "Dengue Fever"
-				},
-				{
-					"treatementId": 2002,
-					"treatementName": "Malaria"
-				},
-				{
-					"treatementId": 2003,
-					"treatementName": "Diabetes"
-				},
-				{
-					"treatementId": 2004,
-					"treatementName": "Pneumonia"
-				},
-				{
-					"treatementId": 2005,
-					"treatementName": "Asthma"
-				},
 				{
 					"treatementId": 2007,
 					"treatementName": "Tuberculosis"
@@ -1220,7 +1132,7 @@ const MOCKDATA = {
 			],
 			"trend": {
 				"averageExpenses": 30000,
-				"noOfDengueCases": 200,
+				"noOfCasesHandled": 200,
 				"successRate": 96,
 				"successfullClaims": 150,
 				"noOfHospitalizations": 100,
@@ -1235,21 +1147,21 @@ const MOCKDATA = {
 				},
 				{
 					"doctorId": 3052,
-					"doctorName": "Dr Mani",
-					"successRate": "9.8",
-					"remarks": "300 cases handled in last 6 months with 90% success rate"
+					"doctorName": "Dr Kavitha",
+					"successRate": "8.8",
+					"remarks": "300 cases handled in last 6 months with 88% success rate"
 				},
 				{
 					"doctorId": 3053,
-					"doctorName": "Dr Tara",
-					"successRate": "7.0",
-					"remarks": "300 cases handled in last 6 months with 70% success rate"
+					"doctorName": "Dr Tarun",
+					"successRate": "8.3",
+					"remarks": "300 cases handled in last 6 months with 83% success rate"
 				},
 				{
 					"doctorId": 3054,
-					"doctorName": "Dr Adrian",
-					"successRate": "9.5",
-					"remarks": "400 cases handled in last 6 months with 95% success rate"
+					"doctorName": "Dr Lavanya",
+					"successRate": "8.0",
+					"remarks": "400 cases handled in last 6 months with 80% success rate"
 				}
 			],
 			"sampleCostBreakUp": {
@@ -1308,8 +1220,20 @@ const MOCKDATA = {
 			"treatementName": "Asthma"
 		},
 		{
-			"treatementId": 2006,
-			"treatementName": "Ulcer"
+			"treatementId": 2007,
+			"treatementName": "Tuberculosis"
+		},
+		{
+			"treatementId": 2008,
+			"treatementName": "Hepatitis"
+		},
+		{
+			"treatementId": 2009,
+			"treatementName": "Arthritis"
+		},
+		{
+			"treatementId": 2010,
+			"treatementName": "Anemia"
 		}
 	],
 	"articles": [

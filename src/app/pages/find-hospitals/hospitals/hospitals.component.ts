@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HospitalsComponent implements OnInit {
 	@Input() hospitals: any;
+	@Input() treatment: any;
 
 	constructor() { }
 

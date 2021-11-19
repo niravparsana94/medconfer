@@ -17,11 +17,12 @@ mat-toolbar {
 	}
 }
 .filter-container {
+	position: relative;
 	.treatment-form {
-		width: 64%;
+		width: 855px;
 		position: absolute;
-		top: 40px;
-		right: 162px;
+		top: -60px;
+		right: 5px;
 		z-index: 1000;
 		.login-more-container {
 			display: flex;
@@ -62,26 +63,33 @@ mat-toolbar {
 	padding: 5px 10px;
 }
 .hospital-record-container {
-	width: 70%;
+	width: 63%;
 	display: flex;
 	justify-content: space-between;
 	h4,
 	h5 {
 		margin-top: 0;
 		margin-bottom: 10px;
+		color: #ff4081;
+	}
+	h4 {
+		padding-left: 5px;
+	}
+	h5 {
+		margin-right: 26px;
 	}
 }
 .hospital-results-container {
 	display: flex;
-	justify-content: space-between;
 	gap: 10px;
 	.hospitals-container {
-		width: 69%;
+		width: 63%;
 	}
 	.trends-container {
-		width: 31%;
+		width: 37%;
 	}
 	mat-card {
 		min-height: 60vh;
+		padding: 0px 5px;
 	}
 }

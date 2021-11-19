@@ -1,5 +1,5 @@
 <!-- <h1 mat-dialog-title>{{data.article.title}}</h1> -->
 <div mat-dialog-content>
 	<img [src]="'assets/images/articles/'+data.article.name+'-more-popup.png'" *ngIf="fromArticles">
-	<img [src]="'assets/images/Req-appointment.png'" *ngIf="!fromArticles">
+	<img [src]="imageSrc" *ngIf="!fromArticles">
 </div>

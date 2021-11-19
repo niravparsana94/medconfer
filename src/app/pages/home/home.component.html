@@ -1,14 +1,13 @@
 <mat-toolbar>
 	<div class="logo-location-container">
 		<img src="assets/images/medconfer.png" width="140px" height="100px" class="logo">
-		<div class="location-component">
-			<button mat-icon-button color="primary" class="location-button" (click)="cityEditable=true;"
-				*ngIf="!cityEditable">
-				<mat-icon style="color:#e10000">place</mat-icon>{{city}}
-			</button>
-			<input class="location-input" [(ngModel)]="city" (blur)="cityEditable=!!!city;setCity()"
-				*ngIf="cityEditable">
-		</div>
+	</div>
+	<div class="location-component">
+		<button mat-icon-button color="primary" class="location-button" (click)="cityEditable=true;"
+			*ngIf="!cityEditable">
+			<mat-icon style="color:#e10000">place</mat-icon>{{city}}
+		</button>
+		<input class="location-input" [(ngModel)]="city" (blur)="cityEditable=!!!city;setCity()" *ngIf="cityEditable">
 	</div>
 	<div class="login-more-container">
 		<button mat-raised-button color="primary">Log In</button>
@@ -22,7 +21,7 @@
 			of 150+ hospitals</h3>
 		<div class="buttons-container">
 			<button mat-raised-button color="primary">Know More</button>
-			<button mat-raised-button color="primary">Help</button>
+			<button mat-raised-button color="primary" (click)="showImage('assets/images/help-image.png')">Help</button>
 		</div>
 	</div>
 	<div class="right-container">
@@ -31,7 +30,7 @@
 </div>
 <div class="treatment-container">
 	<form>
-		<mat-form-field appearance="fill">
+		<mat-form-field appearance="outline">
 			<mat-label>Treatment For</mat-label>
 			<input type="text" matInput [formControl]="selectedTreatment" [matAutocomplete]="auto">
 			<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
@@ -44,24 +43,29 @@
 	</form>
 </div>
 <div class="card-container">
-	<mat-card>
-		<img src="assets/images/medical-expert.jpeg" width="156px" height="130px">
+	<mat-card class="cursor-pointer" (click)="showSmartInsurancePopup()">
+		<img src="assets/images/smart-insurance-policy.png" width="156px" height="130px">
 		<mat-card-content>
-			<h4>Talk to Medical Expert</h4>
+			<h4>Smart insurance policy</h4>
 		</mat-card-content>
 	</mat-card>
-	<mat-card>
-		<img src="assets/images/compare-treatment-cost.jpeg" width="156px" height="130px">
+	<mat-card class="cursor-pointer" (click)="showImage('assets/images/smart-pharmacy-details.png')">
+		<img src="assets/images/smart-pharmacy.png" width="156px" height="130px">
 		<mat-card-content>
-			<h4>Compare Treatment Cost</h4>
+			<h4>Smart Pharmacy</h4>
 		</mat-card-content>
 	</mat-card>
-	<mat-card>
+	<mat-card class="cursor-pointer" (click)="showSmartHealthPopup()">
 		<img src="assets/images/smart-health-checkup.jpeg" width="156px" height="130px">
 		<mat-card-content>
 			<h4>Smart Health Check-up</h4>
 		</mat-card-content>
 	</mat-card>
+</div>
+<img src="assets/images/bottom-3.png" style="width: 100%;margin:10px 0;">
+<div class="bottom-image-container">
+	<img src="assets/images/bottom-1-img.jpg">
+	<img src="assets/images/bottom-2-img.jpg">
 </div>
 <div class="top-10-hospitals-container">
 	<mat-card>

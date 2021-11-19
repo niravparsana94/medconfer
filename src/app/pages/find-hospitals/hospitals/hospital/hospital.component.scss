@@ -20,24 +20,27 @@
 	}
 	.table-container {
 		width: 100%;
-		margin-top: 15px;
+		margin-top: 5px;
 		display: flex;
 		justify-content: center;
+		font-size: 12px;
 		table {
 			background-color: white;
 			border-collapse: collapse;
 			td,
 			th {
-				border: 1px solid blue;
+				border: 1px solid #ff2d0057;
 				padding: 8px;
 			}
 		}
 	}
 }
 .doctors-container {
-	// width: 40%;
 	.doctor-container {
 		margin: 15px 0;
+	}
+	.timings {
+		font-size: 10px;
 	}
 }
 .book-appointment-room-container {
@@ -50,5 +53,10 @@
 	button {
 		width: 170px;
 		transform: scale(0.75);
+	}
+	.note {
+		font-size: 8px;
+		display: block;
+		padding: 0 24px;
 	}
 }

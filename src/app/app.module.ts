@@ -18,9 +18,11 @@ import { DoctorComponent } from './pages/find-hospitals/hospitals/hospital/docto
 import { CommonModalComponent } from './components/common-modal/common-modal.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { InsurancesComponent } from './pages/find-hospitals/hospitals/hospital/insurances/insurances.component';
+import { SmartHealthCheckupComponent } from './components/smart-health-checkup/smart-health-checkup.component';
+import { SmartInsurancePolicyComponent } from './components/smart-insurance-policy/smart-insurance-policy.component';
 
 @NgModule({
-	entryComponents: [CommonModalComponent, InsurancesComponent, ChatComponent],
+	entryComponents: [CommonModalComponent, InsurancesComponent, SmartHealthCheckupComponent, SmartInsurancePolicyComponent, ChatComponent],
 	declarations: [
 		AppComponent,
 		HomeComponent,
@@ -33,7 +35,9 @@ import { InsurancesComponent } from './pages/find-hospitals/hospitals/hospital/i
 		DoctorComponent,
 		CommonModalComponent,
 		ChatComponent,
-		InsurancesComponent
+		InsurancesComponent,
+		SmartHealthCheckupComponent,
+		SmartInsurancePolicyComponent
 	],
 	imports: [
 		BrowserModule,

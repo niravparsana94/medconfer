@@ -33,17 +33,23 @@
 		</div>
 	</div>
 	<div class="doctors-container">
-		<div class="doctor-container" *ngFor="let doctor of hospital?.doctors">
-			<app-doctor [doctor]="doctor"></app-doctor>
+		<div class="doctor-container" *ngFor="let doctor of hospital?.doctors; let i=index">
+			<app-doctor [doctor]="doctor" [treatment]="treatment" [index]="i"></app-doctor>
 		</div>
-		<span class="looklike-link">Click her for more...</span>
-		<h5>Mon - Fri (09:30 AM to 4:30 PM)</h5>
+		<span class="looklike-link">Click here for more...</span>
+		<h5 class="timings">Mon - Fri (09:30 AM to 4:30 PM)</h5>
 	</div>
 	<div class="book-appointment-room-container">
-		<button mat-raised-button color="primary" (click)="showModal()">Book Appointment&nbsp;
+		<img src="assets/images/patient-reviews.png" class="cursor-pointer" width="133px"
+			(click)="showModal('assets/images/patient-reviews-details.png')">
+		<button mat-raised-button color="primary" (click)="showModal('assets/images/Req-appointment.png')">Book
+			Appointment&nbsp;
 			<img src="assets/images/plus.jpeg" width="20px" height="16px">
 		</button>
-		<button mat-raised-button color="primary">Book your room&nbsp;
-			<img src="assets/images/clinic.jpeg" width="20px" height="16px"></button>
+		<div>
+			<span class="note">Average {{treatment}} treatment takes 2 to 3 days , Please book your room.</span>
+			<button mat-raised-button color="primary">Book your room&nbsp;
+				<img src="assets/images/clinic.jpeg" width="20px" height="16px"></button>
+		</div>
 	</div>
 </div>

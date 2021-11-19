@@ -1,5 +1,5 @@
 <mat-toolbar>
-	<img src="assets/images/medconfer.png" width="140px" height="100px" class="logo">
+	<img src="assets/images/medconfer.png" width="140px" height="100px" class="cursor-pointer" [routerLink]="['/home']">
 	<div class="location-component">
 		<button mat-icon-button color="primary" class="location-button" (click)="cityEditable=true;"
 			*ngIf="!cityEditable">
@@ -10,7 +10,7 @@
 </mat-toolbar>
 <div class="filter-container">
 	<form class="treatment-form">
-		<mat-form-field appearance="fill">
+		<mat-form-field appearance="outline">
 			<mat-label>Treatment For</mat-label>
 			<input type="text" matInput [formControl]="selectedTreatment" [matAutocomplete]="auto">
 			<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
@@ -26,7 +26,7 @@
 		</div>
 	</form>
 	<form class="sub-filters-form">
-		<mat-form-field appearance="fill">
+		<mat-form-field appearance="outline">
 			<mat-label>Sort By</mat-label>
 			<mat-select [formControl]="sortBy">
 				<mat-option *ngFor="let sortBy of sortByOptions" [value]="sortBy">
@@ -35,11 +35,11 @@
 			</mat-select>
 		</mat-form-field>
 		<div class="slider-container">
-			<p class="price-per-day">Price / Day : <span style="font-style: italic;">{{priceRange.value |
+			<p class="price-per-day">Price / Day : <span>{{priceRange.value |
 					currency:'INR':'symbol':'1.0'}}</span></p>
 			<mat-slider min="1000" max="100000" step="500" [formControl]="priceRange"></mat-slider>
 		</div>
-		<mat-form-field appearance="fill">
+		<mat-form-field appearance="outline">
 			<mat-label>Treatment Date</mat-label>
 			<input matInput [matDatepicker]="picker">
 			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -58,7 +58,7 @@
 				<mat-card-content>
 					<mat-tab-group animationDuration="0ms">
 						<mat-tab label="Hospitals">
-							<app-hospitals [hospitals]="hospitals"></app-hospitals>
+							<app-hospitals [hospitals]="hospitals" [treatment]="currentTreatmentName"></app-hospitals>
 						</mat-tab>
 						<mat-tab label="Articles">
 							<app-articles></app-articles>
@@ -70,7 +70,7 @@
 		<div class="trends-container">
 			<mat-card>
 				<mat-card-content>
-					<app-trends [hospitals]="hospitals" [treatment]="selectedTreatment.value"></app-trends>
+					<app-trends [hospitals]="hospitals" [treatment]="currentTreatmentName"></app-trends>
 				</mat-card-content>
 			</mat-card>
 		</div>
