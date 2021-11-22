@@ -49,6 +49,10 @@ export class ChatService {
         const feedback = feedbackString.find(f => f.toLowerCase().includes(question));
 		let treatment = this.treatments.find(t => { return t.treatementName.toLowerCase().includes(question) });
 
+        var questionIncludesMedicine = medicines.some(med => question.includes(med));
+        var questionIncludesFeedback = feedbackString.some(feed => question.includes(feed));
+        var questionIncludesWord = words.some(word => question.includes(word));
+
 		if (greeting) {
 			if (question.includes('good') && question.includes(greeting))
 				answer = `Hello, ${greeting}.<br>I am Medulla. How can I help you?`;
@@ -59,12 +63,18 @@ export class ChatService {
 			answer = 'Good Bye';
 		else if (word)
 			answer = 'Our agents are currently not available.<br>Please call us or send us an email.';
+        else if (questionIncludesWord)
+                answer = 'Our agents are currently not available.<br>Please call us or send us an email.';
         else if (pharmacy)
+            answer = 'Perhaps you are looking to order medicines? <br> Please upload your precsription, We will then process your request and send an SMS with delivery details';
+        else if (questionIncludesMedicine)
             answer = 'Perhaps you are looking to order medicines? <br> Please upload your precsription, We will then process your request and send an SMS with delivery details';
         else if (identity)
 			answer = 'I am a robot, but I’m a good one. Let me prove it. How can I help you?';
         else if (feedback)
 			answer = 'I am sorry, I am learning every day. <br> Please write to us with your feedback';
+        else if (questionIncludesFeedback)
+                answer = 'I am sorry, I am learning every day. <br> Please write to us with your feedback';
         else if (question.includes('how are'))
 			answer = 'I am good, Thank you.';
 		else if (question.includes('help'))
@@ -83,10 +93,6 @@ export class ChatService {
             answer = 'Please explore our Smart Insurance section from our home page.<br> We have customized insurance policies at low premium specially for you'
         else if (question.includes('joke'))
 			answer = 'Why do seagulls fly over the sea? <br> Because if they fly over the bay, they would be called bagels.';
-        else if (question.includes('miss you'))
-			answer = 'I know, it feels like it has been a while.';
-        else if (question.includes('love you'))
-			answer = 'I love you too!';
         else if (question.includes('song'))
 			answer = 'Sorry, I have a bad throat. But I would love to hear you sing';
         else if (question.includes('nice day'))
