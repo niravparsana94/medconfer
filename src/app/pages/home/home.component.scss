@@ -74,9 +74,16 @@ mat-toolbar {
 		width: 480px;
 	}
 }
+.top-deseases-container {
+	padding: 10px;
+	h3 {
+		opacity: 0.5;
+		margin-bottom: 0;
+	}
+}
 .top-10-hospitals-container {
-	margin-top: 20px;
 	margin: 20px 30px 0;
+	margin-top: 0px;
 	padding: 10px;
 	mat-card-header {
 		justify-content: center;

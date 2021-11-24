@@ -4,7 +4,7 @@
 			<img src="assets/images/chatbot.jpg" width="25px">
 			<span style="margin-left: 10px;">Ask Medulla</span>
 		</mat-toolbar>
-		<div class="messages">
+		<div class="messages" id="chat-window">
 			<ng-container *ngFor="let message of messages">
 				<div class="message-row"
 					[ngClass]="{ 'from': message.author === 'bot', 'to':   message.author === 'user' }">

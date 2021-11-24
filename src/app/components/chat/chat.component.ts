@@ -16,6 +16,8 @@ export class ChatComponent implements OnInit {
 	ngOnInit() {
 		this.chatService.conversation.subscribe((val) => {
 			this.messages = this.messages.concat(val);
+			const chatWindow = document.getElementById('chat-window');
+			chatWindow.scrollTo(0, chatWindow.scrollHeight);
 		});
 	}
 

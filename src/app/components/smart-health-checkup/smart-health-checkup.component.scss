@@ -1,16 +1,27 @@
 .main-container {
 	padding: 15px;
+    height: 550px;
 }
 table {
+	width: 100%;
 	background-color: white;
 	border-collapse: collapse;
 	td,
 	th {
 		border: 1px solid #ff2d0057;
 		padding: 8px;
+		font-size: 15px;
 	}
 }
-.blood-group-container {
+.top-container,
+.additional-info {
 	display: flex;
 	justify-content: space-between;
+}
+.image-container {
+	display: flex;
+	justify-content: center;
+}
+.additional-info {
+	margin: 10px 0;
 }
